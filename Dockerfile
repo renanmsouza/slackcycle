@@ -7,4 +7,6 @@ RUN npm install --silent
 RUN npm install react-scripts@3.3.1 -g --silent
 # start app
 COPY . .
-RUN npm start
+RUN npm rum build
+RUN npm install -g serve
+RUN npx serve -s build -p 8080
