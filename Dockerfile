@@ -7,8 +7,4 @@ RUN npm install --silent
 RUN npm install react-scripts@3.3.1 -g --silent
 # start app
 COPY . .
-RUN npm run build
-
-FROM nginx
-EXPOSE 8080
-COPY --from=builder /app/build /usr/share/nginx/html
+RUN npm start
